@@ -1,0 +1,38 @@
+.header
+  .header__left
+    Homework App
+  .header__right
+    .header__right__name
+      kota
+    = link_to "ログアウト", "#", class:"header__right__log"
+.main
+  .main__content
+    .main__content__message
+      .main__content__message__text
+        １つ目
+      .main__content__message__index
+        .main__content__message__index__name
+          kota
+        .main__content__message__index__date
+          2020/03/07 15:45
+    .main__content__message
+      .main__content__message__text
+        ２つ目
+      .main__content__message__index
+        .main__content__message__index__name
+          kaito
+        .main__content__message__index__date
+          2020/03/07 17:15
+  .form
+    .form__box
+      %textarea{class:"form__box__input", placeholder:"文字を入力（25文字以内）"}
+      = link_to "投稿する", "#", class:"form__box__send"
+.footer
+  Homework App 2019
+
+  -# .form
+  -#   .form__box
+  -#     .form__box__input
+  -#       %input{class:"form__box__input__text", placeholder:"文字を入力（25文字以内）"}
+  -#     .form__box__send
+  -#       = link_to "投稿する", "#", class:"form__box__send__btn"

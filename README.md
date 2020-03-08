@@ -22,3 +22,24 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false|
+|email|string|null: false|
+|password|string|null:false|
+
+### Association
+has_many posts
+
+## postsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|content|string|null: false|
+|user_id|reference||
+
+### Association
+belongs_to :user
