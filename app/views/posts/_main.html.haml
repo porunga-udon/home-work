@@ -3,26 +3,18 @@
     Homework App
   .header__right
     .header__right__name
-      kota
-    = link_to "ログアウト", "#", class:"header__right__log"
+      -if user_signed_in?
+        =current_user.name
+      -else
+        =link_to "新規登録", new_user_session_path, method: :get, class:"header__right__name__new"
+    .header__right__log
+      -if user_signed_in?
+        =link_to "ログアウト", destroy_user_session_path, method: :delete, class:"header__right__log__out"
+      -else
+        =link_to "ログイン", user_session_path, class:"header__right__log__in"
 .main
-  .main__content
-    .main__content__message
-      .main__content__message__text
-        １つ目
-      .main__content__message__index
-        .main__content__message__index__name
-          kota
-        .main__content__message__index__date
-          2020/03/07 15:45
-    .main__content__message
-      .main__content__message__text
-        ２つ目
-      .main__content__message__index
-        .main__content__message__index__name
-          kaito
-        .main__content__message__index__date
-          2020/03/07 17:15
+  = render "main_content"
+
   .form
     .form__box
       %textarea{class:"form__box__input", placeholder:"文字を入力（25文字以内）"}

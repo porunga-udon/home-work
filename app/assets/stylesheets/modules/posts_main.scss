@@ -27,12 +27,22 @@ $gray-text: gray;
     display: flex;
     font-size: 18px;
     &__name {
-
+      color: $gray-text;
+      &__new {
+        text-decoration: none;
+        color: $gray-text;
+      }
     }
     &__log {
       margin-left: 30px;
-      text-decoration: none;
-      color: $gray-text;
+      &__out {
+        text-decoration: none;
+        color: $gray-text;
+      }
+      &__in {
+        text-decoration: none;
+        color: $gray-text;
+      }
     }
   }
 }

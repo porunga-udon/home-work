@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # get 'posts/index'
-
-  root "posts#index"
+  devise_for :users
+  root to: 'posts#index'
+  resources :posts :only[:create]
 end
