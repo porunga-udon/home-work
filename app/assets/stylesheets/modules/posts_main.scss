@@ -81,28 +81,28 @@ $gray-text: gray;
 }
 
 .form {
-  height: 175px;
+  height: 1750px;
   background-color: white;
   filter: drop-shadow(3px 3px 3px);
   margin-top: 30px;
-  &__box {
-    height: 100%;
-    padding-top: 7px;
-    &__input {
+  height: 100%;
+  padding-top: 7px;
+  padding-bottom: 20px;
+  &__content {
+  display: flex;
+  border: solid thin $gray-text;
+  width: 80%;
+  height: 100px;
+  margin: 10px auto;
+  padding-top: 0px;
+  text-align: initial;
+  resize: none;
+  }
+  &__send {
+    height: 40px;
+    width:  100px;
     display: flex;
-    border: solid thin $gray-text;
-    width: 80%;
-    height: 100px;
-    margin: 10px auto;
-    padding-top: 0px;
-    text-align: initial;
-    resize: none;
-    }
-    &__send {
-      height: 40px;
-      width:  100px;
-      display: flex;
-      margin: 0 auto;
+    margin: 0 auto;
       background-color: rgb(218, 211, 211);
       text-decoration: none;
       color: black;
@@ -110,7 +110,6 @@ $gray-text: gray;
       justify-content: center;
       align-items: center;
     }
-  }
 }
 
 
