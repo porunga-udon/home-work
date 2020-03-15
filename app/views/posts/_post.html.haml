@@ -1,0 +1,8 @@
+.main__content__message
+  .main__content__message__text
+    =post.content
+  .main__content__message__index
+    .main__content__message__index__name
+      =post.user.name
+    .main__content__message__index__date
+      =post.created_at.strftime("%Y年%m月%d日 %H時%M分")

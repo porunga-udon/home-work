@@ -13,18 +13,15 @@
       -else
         =link_to "ログイン", user_session_path, class:"header__right__log__in"
 .main
-  = render "main_content"
+  .main__content
+    = render @posts
 
-  .form
-    .form__box
-      %textarea{class:"form__box__input", placeholder:"文字を入力（25文字以内）"}
-      = link_to "投稿する", "#", class:"form__box__send"
+  -if user_signed_in?
+    .form
+      =form_for [@post] do |f|
+        = f.text_area :content, class: 'form__content', placeholder: '文字を入力（25文字以内）'
+        = f.submit "投稿する", class:"form__send"
+  -else
+
 .footer
   Homework App 2019
-
-  -# .form
-  -#   .form__box
-  -#     .form__box__input
-  -#       %input{class:"form__box__input__text", placeholder:"文字を入力（25文字以内）"}
-  -#     .form__box__send
-  -#       = link_to "投稿する", "#", class:"form__box__send__btn"
