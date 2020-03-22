@@ -44,16 +44,16 @@ $(function(){
   })
 
   $(".main__content__message").mouseover(function(){
-    $(this).animate({ 
+    $(this).stop().animate({ 
       color: "white",
       backgroundColor: "#97D1E4"
-    })
+    },500)
   })
 
   $(".main__content__message").mouseleave(function(){
-    $(this).animate({
+    $(this).stop().animate({
       color: "black",
       backgroundColor: "white"
-    });
+    },500);
   })
 });
