@@ -43,4 +43,17 @@ $(function(){
     })
   })
 
+  $(".main__content__message").mouseover(function(){
+    $(this).animate({ 
+      color: "white",
+      backgroundColor: "#97D1E4"
+    })
+  })
+
+  $(".main__content__message").mouseleave(function(){
+    $(this).animate({
+      color: "black",
+      backgroundColor: "white"
+    });
+  })
 });
