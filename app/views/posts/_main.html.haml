@@ -5,6 +5,7 @@
     .header__right__name
       -if user_signed_in?
         =current_user.name
+
       -else
         =link_to "新規登録", new_user_session_path, method: :get, class:"header__right__name__new"
     .header__right__log
@@ -21,7 +22,6 @@
       =form_for [@post] do |f|
         = f.text_area :content, class: 'form__content', placeholder: '文字を入力（25文字以内）'
         = f.submit "投稿する", class:"form__send"
-  -else
 
 .footer
   Homework App 2019
