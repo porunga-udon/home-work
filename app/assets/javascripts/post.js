@@ -54,6 +54,6 @@ $(function(){
     $(this).stop().animate({
       color: "black",
       backgroundColor: "white"
-    },500);
+    },1000);
   })
 });
