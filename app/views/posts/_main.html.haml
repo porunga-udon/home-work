@@ -21,7 +21,29 @@
     .form
       =form_for [@post] do |f|
         = f.text_area :content, class: 'form__content', placeholder: '文字を入力（25文字以内）'
-        = f.submit "投稿する", class:"form__send"
+        = f.submit "投稿する", class:"form__send", id:"modal-open"
 
 .footer
   Homework App 2019
+
+.modal-overlay
+
+.modal
+  .modal__text
+    本当に送信しますか？
+  .modal__btn
+    =link_to root_path, class:"modal-btn__yes" do
+      送信する
+    =link_to "#", class:"modal-btn__no" do
+      閉じる
+
+-# .modal-overlay
+
+-# .modal
+-#   .modal__text
+-#     本当に送信しますか？
+-#   .modal__btn
+-#     =link_to "#", class:"modal-btn__yes" do
+-#       送信する
+-#     =link_to "#", class:"modal-btn__no" do
+-#       閉じる
